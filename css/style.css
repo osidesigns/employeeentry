@@ -1,0 +1,24 @@
+/* Custome Styles */
+
+.container{
+	background-color: #6F2424;
+}
+
+.container h1{
+	color: #efefef;
+}
+
+.container label{
+	color: #FFDF32;
+}
+
+.container input{
+	border: 2px solid #FFDF32;
+	color: #2d2d2d;
+	height: 50px;
+}
+
+.container p{
+	color: #fff;
+	font-weight: bold;
+}
