@@ -18,19 +18,19 @@
 
 		<form method="POST" action="scripts/create.php">
 		  <div class="row">
-		  	<div class="col-5">
+		  	<div class="col-12 col-md-5">
 			  <div class="form-group">
 			    <label for="firstName">First Name</label>
 			    <input type="text" name="firstName" class="form-control" id="firstName" placeholder="First Name">
 			  </div>
 			</div>
-			<div class="col-5">
+			<div class="col-12 col-md-5">
 			  <div class="form-group">
 			  	<label for="lastName">Last Name</label>
 			    <input type="text" name="lastName" class="form-control" id="lastName" placeholder="Last Name">
 			  </div>
 			</div>
-			<div class="col">
+			<div class="col-12 col-md-2">
 			  <div class="form-group">
 			  	<label for="age">Age</label>
 			    <input type="text" name="age" class="form-control" id="age" placeholder="Age">
@@ -118,11 +118,20 @@
 		  </div>
 
 		</form><!--end of form -->
+
+		<div class="row" style="color: white;">
+			<hr class="style2">
+			<div id="empList" class="col">
+				
+			</div>
+		</div>
 	</div><!-- end of container -->
+
 
 	<!-- Bootstrap 4 JS CDN -->
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+	<script src="js/getEmployees.js"></script>
 </body>
 </html>

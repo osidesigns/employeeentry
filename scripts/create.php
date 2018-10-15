@@ -19,7 +19,7 @@
 	$conn = $dbh->getConnection(); //Get Db Connection
 
 	//SQL QUERY TO BE EXECUTED
-	$sql = 'INSERT INTO employees (S_FIRSTNAME, S_LASTNAME, N_AGE, S_ADDRESS, S_CITY, S_STATE, N_ZIPCODE, N_SSN, S_EMAIL, N_PHONE1, N_PHONE2) VALUES (:firstName, :lastName, :age, :address, :city, :state, :zipcode, :ssn, :email, :phone1, :phone2)';
+	$sql = 'INSERT INTO employees (S_FIRSTNAME, S_LASTNAME, N_AGE, S_ADDRESS, S_CITY, S_STATE, N_ZIPCODE, N_SSN, S_EMAIL, N_PHONE1, N_PHONE2) VALUES(:firstName, :lastName, :age, :address, :city, :state, :zipcode, :ssn, :email, :phone1, :phone2)';
 
 
 	//Prepare your query to be executed
