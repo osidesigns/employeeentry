@@ -3,6 +3,7 @@
 	require_once('database.php');
 
 	//Variable declaration and assignment
+	$id = $_POST['id'];
 	$firstName = $_POST['firstName'];
 	$lastName = $_POST['lastName'];
 	$age = $_POST['age'];
@@ -19,7 +20,7 @@
 	$conn = $dbh->getConnection(); //Get Db Connection
 
 	//SQL QUERY TO BE EXECUTED
-	$sql = 'INSERT INTO employees (S_FIRSTNAME, S_LASTNAME, N_AGE, S_ADDRESS, S_CITY, S_STATE, N_ZIPCODE, N_SSN, S_EMAIL, N_PHONE1, N_PHONE2) VALUES(:firstName, :lastName, :age, :address, :city, :state, :zipcode, :ssn, :email, :phone1, :phone2)';
+	$sql = 'UPDATE employees SET S_FIRSTNAME = :firstName, S_LASTNAME = :lastName WHERE N_ID = :id';
 
 
 	//Prepare your query to be executed
@@ -27,6 +28,7 @@
 
 	//Execute the statement
 	$stmnt->execute(array(
+		':id' => $id,
 		':firstName' => strtoupper($firstName),
 		':lastName' => strtoupper($lastName),
 		':age' => $age,

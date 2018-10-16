@@ -5,7 +5,7 @@
 	$dbh = new Database();
 	$conn =  $dbh->getConnection();
 
-	$sql = 'SELECT S_FIRSTNAME,S_LASTNAME,S_EMAIL,N_PHONE1 FROM employees';
+	$sql = 'SELECT N_ID,S_FIRSTNAME,S_LASTNAME,S_EMAIL,N_PHONE1 FROM employees';
 
 
 
