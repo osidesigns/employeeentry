@@ -1,7 +1,7 @@
 <?php
 	class Database{
 		private $dbHost = 'localhost';
-		private $dbName = 'widgetinc_db';
+		private $dbName = 'xyz_inc';
 		private $dbUsername = 'root';
 		private $dbPassword = '';
 		public $conn;

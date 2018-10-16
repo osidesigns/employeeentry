@@ -1,30 +1,33 @@
-setTimeout(getBtns, 1000);
+// setTimeout(getBtns, 1000);
 
-function getBtns(){
-	var btns = document.querySelectorAll('button');
-	var btnId;
+// function getBtns(){
+// 	var btns = document.querySelectorAll('button');
+// 	var btnId;
 
-	Array.from(btns);
+// 	Array.from(btns);
 
-	for(var i = 0; i < btns.length; i++){
-		btns[i].onclick = function(){
-			btnId = this.getAttribute('id');
-		}
-	}
+// 	for(var i = 0; i < btns.length; i++){
+// 		btns[i].onclick = function(){
+// 			btnId = this.getAttribute('id');
+// 		}
+// 	}
 
-	return btnId;
-}
+// 	return btnId;
+// }
 
 
-function editUser(){
-		
-		var btnId = getBtns();
+function editUser(btnId){	
+		var firstName = document.getElementById('firstName').value;
+		var lastName = document.getElementById('lastName').value;
+		btnId = parseInt(btnId);
+
+		console.log(btnId);
 		var xhr = new XMLHttpRequest();
+	xhr.open('POST', 'scripts/update.php', true);
+	console.log(firstName+lastName);
 
-		btnId = parseInt(btnIn);
 		xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 
 
-	xhr.open('POST', 'scripts/update.php', true);
-	xhr.send();
+	xhr.send("id="+ btnId + "&firstName="+firstName+"&lastName="+lastName);
 }
